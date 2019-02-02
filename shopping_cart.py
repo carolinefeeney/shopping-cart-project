@@ -81,6 +81,8 @@ tax = total_price * (.06)
 print("Plus DC Sales Tax (6%): " + str(tax)) 
 end_total = total_price + tax
 print("Total: " + str(end_total))
+print("---------------------------------")
+print("Thanks for shopping with us! Please come again soon.")
 
 #TODO add a nice message
 
