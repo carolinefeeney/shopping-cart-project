@@ -35,8 +35,17 @@ products = [
 #
 
 selected_id = input("Please input a product identifier: ") #> "9" (string)
-print(selected_id)
-print(type(selected_id))
+# print(selected_id)
+# print(type(selected_id))
+matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+# need to make sure that datatypes are the same when using == (str)
+matching_product = matching_products[0]
+# print(matching_product)
+# print(type(matching_product))
+print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"])) #remember to convert numbers to strings when concatenating them
+
+
+
 
 
 
