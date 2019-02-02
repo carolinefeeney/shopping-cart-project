@@ -1,7 +1,5 @@
 # shopping_cart.py
 
-import datetime
-
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -55,6 +53,9 @@ while True:
 # INFO DISPLAY / OUTPUT
 #
 
+import datetime
+now = datetime.datetime.now()
+
 print("---------------------------------")
 print("FEENEY MART")
 print("---------------------------------")
@@ -62,7 +63,7 @@ print("Phone:   908-499-8986")
 print("Web:     www.feeney-mart.com")
 print("Address: 20 W 34th Street ")
 print("         New York, NY 10001")
-print("Checkout Time: ") #TODO add date/time
+print("Checkout Time: "+ (str(now))) #TODO is this human friendly enough?
 print("---------------------------------")
 print("Shopping Cart Items:")
 #print(selected_ids)
