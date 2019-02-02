@@ -61,8 +61,8 @@ print("FEENEY MART")
 print("---------------------------------")
 print("Phone:   908-499-8986")
 print("Web:     www.feeney-mart.com")
-print("Address: 20 W 34th Street ")
-print("         New York, NY 10001")
+print("Address: 3700 O Street NW ")
+print("         Washington, D.C. 20057")
 print("Checkout Time: "+ (str(now))) #TODO is this human friendly enough?
 print("---------------------------------")
 print("Shopping Cart Items:")
@@ -72,10 +72,17 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #> need to make sure that datatypes are the same when using == (str)
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
-    print("+" + " " + "SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"])) #> remember to convert numbers to strings when concatenating them
+    print("+" + " " + "SELECTED PRODUCT: " + matching_product["name"] + " (" + str(matching_product["price"]) + ")") #> remember to convert numbers to strings when concatenating them
 
-print("Subtotal: " + str(total_price)) #TODO format as USD
+#TODO format as USD
 
+print("Subtotal: " + str(total_price)) 
+tax = total_price * (.06)
+print("Plus DC Sales Tax (6%): " + str(tax)) 
+end_total = total_price + tax
+print("Total: " + str(end_total))
+
+#TODO add a nice message
 
 # grocery store name of your choice.
 # A grocery store phone number and/or website URL and/or address of choice.
