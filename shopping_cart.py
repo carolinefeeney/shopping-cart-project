@@ -48,6 +48,7 @@ while True:
         #matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #> need to make sure that datatypes are the same when using == (str)
         #matching_product = matching_products[0]
         #total_price = total_price + matching_product["price"]
+        #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"])) #> remember to convert numbers to strings when concatenating them
         selected_ids.append(selected_id)
 
 #
