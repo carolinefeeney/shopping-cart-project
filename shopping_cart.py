@@ -32,6 +32,7 @@ products = [
 # INFO CAPTURE / INPUT
 #
 
+
 total_price = 0
 selected_ids = []
 
@@ -63,7 +64,7 @@ print("Phone:   908-499-8986")
 print("Web:     www.feeney-mart.com")
 print("Address: 3700 O Street NW ")
 print("         Washington, D.C. 20057")
-print("Checkout Time: "+ (str(now))) #TODO is this human friendly enough?
+print("Checkout Time: "+ (str(now))) #TODO make more human friendly!
 print("---------------------------------")
 print("Shopping Cart Items:")
 #print(selected_ids)
@@ -72,25 +73,21 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #> need to make sure that datatypes are the same when using == (str)
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
-    print("+" + " " + "SELECTED PRODUCT: " + matching_product["name"] + " (" + str(matching_product["price"]) + ")") #> remember to convert numbers to strings when concatenating them
+    matching_product_usd = "${0:.2f}".format(matching_product["price"])
+    print(" +" + " " + matching_product["name"] + " (" + str(matching_product_usd) + ")") #> remember to convert numbers to strings when concatenating them
 
-#TODO format as USD
+#TODO format as USD!
+#print_usd = "${0:.2f}".format(p["price"])
+    #print(" + " + p["name"] + " (" + str(print_usd) + ")")
 
-print("Subtotal: " + str(total_price)) 
+total_price_usd = "${0:.2f}".format(total_price) 
+print("Subtotal: " + str(total_price_usd)) 
 tax = total_price * (.06)
-print("Plus DC Sales Tax (6%): " + str(tax)) 
+tax_usd = "${0:.2f}".format(tax)
+print("Plus DC Sales Tax (6%): " + str(tax_usd)) 
 end_total = total_price + tax
-print("Total: " + str(end_total))
+end_total_usd =  "${0:.2f}".format(end_total) 
+print("Total: " + str(end_total_usd))
 print("---------------------------------")
 print("Thanks for shopping with us! Please come again soon.")
 
-#TODO add a nice message
-
-# grocery store name of your choice.
-# A grocery store phone number and/or website URL and/or address of choice.
-# The date and time of the beginning of the checkout process, formatted in a human-friendly way.
-# The name and price of each shopping cart item, price being formatted as US dollars and cents (e.g. $1.50).
-# The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices.
-# The amount of tax owed, calculated by multiplying the total cost by a District of Columbia sales tax rate of 6%.
-# The total amount owed, formatted as US dollars and cents (e.g. $4.77), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items.
-# A friendly message thanking the customer and/or encouraging the customer to shop again.
