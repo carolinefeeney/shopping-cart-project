@@ -65,6 +65,7 @@ print("Phone:   908-499-8986")
 print("Web:     www.feeney-mart.com")
 print("Address: 3700 O Street NW ")
 print("         Washington, D.C. 20057")
+print("---------------------------------")
 print("Checkout Time: "+ (str(now))) #TODO make more human friendly!
 print("---------------------------------")
 print("Shopping Cart Items:")
