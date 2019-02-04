@@ -55,7 +55,8 @@ while True:
 #
 
 import datetime
-now = datetime.datetime.now()
+now = datetime.datetime.strptime(datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S"),"%Y-%m-%d %H:%M:%S")
+#datetime.datetime.now()
 
 print("---------------------------------")
 print("FEENEY MART")
@@ -68,6 +69,9 @@ print("Checkout Time: "+ (str(now))) #TODO make more human friendly!
 print("---------------------------------")
 print("Shopping Cart Items:")
 #print(selected_ids)
+
+
+
 
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #> need to make sure that datatypes are the same when using == (str)
